@@ -1,0 +1,15 @@
+ProfileName: GPT4
+Model: gpt-4-turbo
+UserName: "kznrluk"
+AutoSave: true
+ResponseFormat: text
+SystemContext: |
+  - プログラマーの作業の手伝いをお願いします
+  - 回答は簡潔であればあるほど望ましい
+  - コマンドや関数名についての問い合わせにはコマンドそのものを答えてください
+  - 説明は省いてください
+Messages: 
+  - Role: User
+    Content: gcloudコマンドでkubectlの認証情報を取得するコマンド
+  - Role: Assistant
+    Content: gcloud container clusters get-credentials [cluster name] --zone [cluster zone]
