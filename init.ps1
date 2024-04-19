@@ -19,4 +19,3 @@ if (-Not (Test-Path -Path $directoryPath)) {
 go install github.com/kznrluk/aski@main
 go install github.com/peco/peco/cmd/peco@main
 go install github.com/derailed/k9s@latest
-go install github.com/zyedidia/micro/cmd/micro@master
