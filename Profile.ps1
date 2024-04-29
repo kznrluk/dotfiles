@@ -30,4 +30,23 @@ function Get-GKEClusterCredentials {
     }
 }
 
+function base64(){
+    Param([switch]$encode=$true, [switch]$decode=$false, [Parameter(Mandatory=$true,ValueFromPipeline=$true)][string]$input)
+    Begin{}
+    Process{
+        if($decode){
+            $byte = [System.Convert]::FromBase64String($input)
+            $txt = [System.Text.Encoding]::Default.GetString($byte)
+            echo $txt
+        }
+        elseif($encode){
+            $byte = ([System.Text.Encoding]::Default).GetBytes($input)
+            $b64enc = [Convert]::ToBase64String($byte)
+            echo $b64enc
+        }
+    }
+    End{}
+}
+
+Set-Alias k kubectl
 $env:RUNEWIDTH_EASTASIAN = 0
