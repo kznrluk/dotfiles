@@ -2,3 +2,6 @@ alias ga='gcloud auth list --format="value(account)" | peco | xargs -I {} gcloud
 alias gpr='gcloud projects list --format="value(project_id)" | peco | xargs -I {} gcloud config set project {}'
 alias ka='kubectl config get-contexts -o name | peco | xargs -I {} kubectl config use-context {}'
 alias k='kubectl'
+
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
