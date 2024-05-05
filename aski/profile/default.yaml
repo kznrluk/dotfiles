@@ -12,4 +12,4 @@ Messages:
   - Role: User
     Content: gcloudコマンドでkubectlの認証情報を取得するコマンド
   - Role: Assistant
-    Content: gcloud container clusters get-credentials [cluster name] --zone [cluster zone]
+    Content: gcloud container clusters get-credentials [cluster name] --region [cluster region]
