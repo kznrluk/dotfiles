@@ -1,3 +1,5 @@
+# $HOME\Documents\PowerShell\Profile.ps1
+
 function Select-GcloudAccount {
     $account = gcloud auth list --format="value(account)" | peco
     gcloud config set account $account
